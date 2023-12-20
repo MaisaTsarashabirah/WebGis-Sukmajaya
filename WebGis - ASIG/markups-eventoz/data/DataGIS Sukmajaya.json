@@ -1,0 +1,342 @@
+{
+    "type": "FeatureCollection",
+    "name": "DataGIS Sukmajaya",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "No": 1,
+                "Nama Ekspedisi": "Wahana Ekspedisi Depok Proklamasi",
+                "Kelurahan": "Mekarjaya",
+                "Alamat": "JL. PROKLAMASI NO.3 & 4 BLOK 12 DEPOK 2 TENGAH, KEL. MEKARJAYA",
+                "Fasiltas": "  Mesin Print, Kertas HVS, Pulpen, Mesin Fc, Gudang",
+                "Pembayaran": "Cash, e-Wallet",
+                "Latitude": -6.391630041,
+                "Longitude": 106.8377909,
+                "Koordinat": "-6.391630041415775, 106.83779087821532",
+                "List Kelurahan": "Sukmajaya "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.8377909,
+                    -6.391630041
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "No": 2,
+                "Nama Ekspedisi": "J&T CARGO DPK015A",
+                "Kelurahan": "Sukmajaya",
+                "Alamat": "Jl. Raden Saleh RW008 No.RT004, Sukmajaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16412",
+                "Fasiltas": "  Mesin Print, Kertas HVS, Pulpen, Mesin Fc, Gudang",
+                "Pembayaran": "Cash, e-Wallet",
+                "Latitude": -6.41530279,
+                "Longitude": 106.8420144,
+                "Koordinat": "-6.415302789732039, 106.84201436682255",
+                "List Kelurahan": "Sukmajaya"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.8420144,
+                    -6.41530279
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "No": 3,
+                "Nama Ekspedisi": "WAHANA EXPRESS",
+                "Kelurahan": "Sukmajaya",
+                "Alamat": "Mutiara depok blok Kf 4, Jl. Tole Iskandar, Sukmajaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16412 ",
+                "Fasiltas": "  Mesin Print, Kertas HVS, Pulpen, Mesin Fc, Gudang",
+                "Pembayaran": "Cash, e-Wallet",
+                "Latitude": -6.410824609,
+                "Longitude": 106.8431156,
+                "Koordinat": "-6.41082460864337, 106.84311560865054",
+                "List Kelurahan": "Sukmajaya"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.8431156,
+                    -6.410824609
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "No": 4,
+                "Nama Ekspedisi": "JNT CARGO DEPOK TERDEKAT",
+                "Kelurahan": "Mekarjaya",
+                "Alamat": "Jl. Griya Asri Timur 3 No.11-A, Mekar Jaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16411",
+                "Fasiltas": "  Mesin Print, Kertas HVS, Pulpen, Mesin Fc, Gudang",
+                "Pembayaran": "Cash",
+                "Latitude": -6.402693596,
+                "Longitude": 106.8407438,
+                "Koordinat": "-6.402693596178763, 106.8407437993593",
+                "List Kelurahan": "Sukmajaya"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.8407438,
+                    -6.402693596
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "No": 5,
+                "Nama Ekspedisi": "WAHANA EXPRESS DEPOK PONDOK SUKMAJAYA PERMAI",
+                "Kelurahan": "Sukmajaya",
+                "Alamat": "HRRW+9GR, Jl. Pd. Sukmajaya Permai, Sukmajaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16412",
+                "Fasiltas": "  Mesin Print, Kertas HVS, Pulpen, Mesin Fc, Gudang",
+                "Pembayaran": "Cash",
+                "Latitude": -6.408984721,
+                "Longitude": 106.8463193,
+                "Koordinat": "-6.4089847212962905, 106.84631928703179",
+                "List Kelurahan": "Sukmajaya"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.8463193,
+                    -6.408984721
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "No": 6,
+                "Nama Ekspedisi": "WAHANA EXPRESS",
+                "Kelurahan": "Mekarjaya",
+                "Alamat": " Jl. Moh. Yusuf Raya No.20, Mekar Jaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16411",
+                "Fasiltas": "  Mesin Print, Kertas HVS, Pulpen, Mesin Fc, Gudang",
+                "Pembayaran": "Cash, e-Wallet",
+                "Latitude": -6.38472816,
+                "Longitude": 106.8384355,
+                "Koordinat": "-6.384728160198766, 106.83843550924993 ",
+                "List Kelurahan": "Mekarjaya"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.8384355,
+                    -6.38472816
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "No": 7,
+                "Nama Ekspedisi": "J&T Cargo Depok DPK014A",
+                "Kelurahan": "Baktijaya",
+                "Alamat": " Jl. Keadilan Raya No.410B, Bakti Jaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16418",
+                "Fasiltas": "  Mesin Print, Kertas HVS, Pulpen, Mesin Fc, Gudang",
+                "Pembayaran": "Cash, e-Wallet",
+                "Latitude": -6.386276812,
+                "Longitude": 106.8384355,
+                "Koordinat": "-6.386276811815328, 106.83843550924993",
+                "List Kelurahan": "Baktijaya"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.8384355,
+                    -6.386276812
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "No": 8,
+                "Nama Ekspedisi": "J&T Cargo Tole Iskandar",
+                "Kelurahan": "Mekarjaya",
+                "Alamat": "Jl. Tole Iskandar No.28 F, Mekar Jaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16411",
+                "Fasiltas":"  Mesin Print, Kertas HVS, Pulpen, Mesin Fc, Gudang",
+                "Pembayaran": "Cash, e-Wallet",
+                "Latitude": -6.403944426,
+                "Longitude": 106.8418727,
+                "Koordinat": "-6.403941760841089, 106.84183443108414",
+                "List Kelurahan": "Mekarjaya"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.8418727,
+                    -6.403944426
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "No": 9,
+                "Nama Ekspedisi": "JASA PENGIRIMAN FEDEX",
+                "Kelurahan": "Mekarjaya",
+                "Alamat": "Jl. Biola Raya No.185, Mekar Jaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 1641",
+                "Fasiltas": "  Mesin Print, Kertas HVS, Pulpen, Mesin Fc, Gudang",
+                "Pembayaran": "Cash, e-Wallet",
+                "Latitude": -6.395065489,
+                "Longitude": 106.8387202,
+                "Koordinat": "-6.395065488800315, 106.8387202349066",
+                "List Kelurahan": "Mekarjaya"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.8387202,
+                    -6.395065489
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "No": 10,
+                "Nama Ekspedisi": "MAS Kargo Depok",
+                "Kelurahan": "Tirtajaya",
+                "Alamat": "Jl. Tirta Mulya III No.29, Tirtajaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16412",
+                "Fasiltas": "  Mesin Print, Kertas HVS, Pulpen, Mesin Fc, Gudang",
+                "Pembayaran": "Cash, e-Wallet",
+                "Latitude": -6.414788143,
+                "Longitude": 106.8214163,
+                "Koordinat": "-6.414788143008779, 106.82141625757765",
+                "List Kelurahan": "Tirtajaya"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.8214163,
+                    -6.414788143
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "No": 11,
+                "Nama Ekspedisi": "Nafal Bersaudara Expressindo",
+                "Kelurahan": "Abadijaya",
+                "Alamat": "Raya No Sukmajaya No.22 Depok Timur, Jalan Merdeka, Abadijaya, Sukmajaya, Abadijaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16417",
+                "Fasiltas": "  Mesin Print, Kertas HVS, Pulpen, Mesin Fc, Gudang",
+                "Pembayaran": "Cash, e-Wallet",
+                "Latitude": -6.396700793,
+                "Longitude": 106.8509011,
+                "Koordinat": "-6.39670079275851, 106.85090113502088",
+                "List Kelurahan": " Abadijaya"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.8509011,
+                    -6.396700793
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "No": 12,
+                "Nama Ekspedisi": "WAHANA EXPRESS DEPOK PERUM MUTIARA",
+                "Kelurahan": "Sukmajaya",
+                "Alamat": "HRQV+M69, Jl. Mutiara Depok, Sukmajaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16412",
+                "Fasiltas": "  Mesin Print, Kertas HVS, Pulpen, Mesin Fc, Gudang",
+                "Pembayaran": "Cash, e-Wallet",
+                "Latitude": -6.410817734,
+                "Longitude": 106.8431064,
+                "Koordinat": "-6.4108177336112036, 106.84310643428454",
+                "List Kelurahan": "Sukmajaya"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.8431064,
+                    -6.410817734
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "No": 13,
+                "Nama Ekspedisi": "Jasa Transportasi Barang",
+                "Kelurahan": "Abadijaya",
+                "Alamat": "Jl. Keadilan Ujung No.59, Bakti Jaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16418",
+                "Fasiltas": "  Mesin Print, Kertas HVS, Pulpen, Mesin Fc, Gudang",
+                "Pembayaran": "Cash, e-Wallet",
+                "Latitude": -6.390558728,
+                "Longitude": 106.8487825,
+                "Koordinat": "-6.390558727971427, 106.84878249828596",
+                "List Kelurahan": "Abadijaya"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.8487825,
+                    -6.390558728
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "No": 14,
+                "Nama Ekspedisi": "Sentral Cargo Depok",
+                "Kelurahan": null,
+                "Alamat": "HRRW+9GR, Jl. Pd. Sukmajaya Permai, Sukmajaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16412",
+                "Fasiltas": "  Mesin Print, Kertas HVS, Pulpen, Mesin Fc, Gudang",
+                "Pembayaran": "Cash, e-Wallet",
+                "Latitude": -6.382977891,
+                "Longitude": 106.8522639,
+                "Koordinat": " -6.382977890891013, 106.8522638915907",
+                "List Kelurahan": "Baktijaya"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.8522639,
+                    -6.382977891
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "No": 15,
+                "Nama Ekspedisi": "Agen NCS Luar Kot",
+                "Kelurahan": "Mekarjaya",
+                "Alamat": " Jl. Proklamasi No.12, Mekar Jaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16411",
+                "Fasiltas": "  Mesin Print, Kertas HVS, Pulpen, Mesin Fc, Gudang",
+                "Pembayaran": "Cash, e-Wallet",
+                "Latitude": -6.391383601,
+                "Longitude": 106.8348153,
+                "Koordinat": "-6.391383601463533, 106.83481530728717",
+                "List Kelurahan": "Mekarjaya"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.8348153,
+                    -6.391383601
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="map.css">
+
+    <!-- SiKurir -->
+    <title>SiKurir</title>
+	<link rel="shortcut icon" type="image/icon" href="assets/images/logo-sikurir.jpeg" />
+
+    <!-- import leaflet js -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+   
+    <!-- import minimap -->
+    <link rel="stylesheet" href="./source/Control.MiniMap.min.css"/>
+    <script src="./source\Control.MiniMap.min.js"></script>
+
+    <!-- import geocoder -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+
+    <style>
+        .popup-container {
+            max-width: 300px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        }
+
+        .popup-container h3 {
+            margin-top: 0;
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        .popup-container p {
+            margin: 5px 0;
+            color: #555;
+            font-size: 1em;
+        }
+
+        /* Custom styling for the close button */
+        .leaflet-popup-close-button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            padding: 5px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 14px;
+        }
+       
+        /* Style for the mini-map container */
+        #windImage {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            max-width: 200px; /* Adjust the max-width as needed */
+            z-index: 1000;
+        }
+
+        #map {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+
+    </style>
+
+    <title>SiKurir</title>
+</head>
+
+<body>
+    
+    <!-- Image for wind direction -->
+    <img id="windImage" src="assets/images/arah angin.png" alt="Wind Direction">
+    
+     <div id="map"></div>
+    <script>
+        var map = L.map('map').setView([-6.391630041, 106.8377909], 13);
+
+        // Add base layers
+        var openStreet = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        });
+
+        var osmHOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors, Tiles style by Humanitarian OpenStreetMap Team hosted by OpenStreetMap France'
+        });
+
+        // Add overlay layers
+        var littleton = L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.'),
+            denver = L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.'),
+            aurora = L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.'),
+            golden = L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.');
+
+        var cities = L.layerGroup([littleton, denver, aurora, golden]);
+
+        // Untuk menyimpan data ekspedisi point
+        var EkspedisiPoint = L.layerGroup().addTo(map);
+        var poligonSukmajayaLayer = L.layerGroup().addTo(map);
+        var petaDepokLayer = L.layerGroup().addTo(map);
+
+        // membaca GeoJSON untuk titik koordinat
+        fetch('data/DataGIS Sukmajaya.json')
+            .then(response => response.json())
+            .then(data => {
+                // Data JSON dapat digunakan di sini
+                // Contoh: Menambahkan marker untuk setiap titik dalam data JSON
+                data.features.map(feature => {
+                    var coordinates = feature.geometry.coordinates.reverse();
+                    // Styling popup disini
+                    var popupContent = `
+                        <div class="popup-container">
+                            <h3>${feature.properties['Nama Ekspedisi']}</h3>
+                            <p><strong>Kelurahan:</strong> ${feature.properties['Kelurahan']}</p>
+                            <p><strong>Alamat:</strong> ${feature.properties['Alamat']}</p>
+                            <p><strong>Fasilitas:</strong> ${feature.properties['Fasiltas']}</p>
+                            <p><strong>Pembayaran:</strong> ${feature.properties['Pembayaran']}</p>
+                            <p><strong>Koordinat:</strong> ${feature.properties['Koordinat']}</p>
+                        </div>
+                    `;
+
+                    L.marker(coordinates).bindPopup(popupContent, { closeButton: true }).addTo(EkspedisiPoint);
+                });
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
+
+        // Membaca GeoJSON untuk poligon Sukmajaya
+        fetch('data/PoligonSukmajaya.json')
+            .then(response => response.json())
+            .then(data => {
+                L.geoJSON(data, {
+                    style: { color: 'green', fillColor: 'lightgreen', weight: 5 }
+                }).addTo(map);
+            })
+            .catch(error => console.error('Error fetching Polygon GeoJSON:', error));
+
+        // Membaca GeoJSON untuk poligon sedepok
+        fetch('data/PetaDepok.json')
+            .then(response => response.json())
+            .then(data => {
+                L.geoJSON(data, {
+                    style: { color: 'green', fillColor: 'lightgreen', weight: 1 }
+                }).addTo(map);
+            })
+            .catch(error => console.error('Error fetching Polygon GeoJSON:', error));
+
+        // Add overlayars --- untuk nampilin digitasi dari file geojson kalian, tinggal di tambah aja
+        var overlayLayers = {
+            "Titik Ekspedisi": EkspedisiPoint,
+            "Cities": cities,
+            "Kecamatan Sukmajaya": poligonSukmajayaLayer, 
+            "Peta Depok": petaDepokLayer, 
+        };
+
+        // Add layers control --- kalo mau tambah" tema map
+        var baseLayers = {
+            "Open Street": openStreet,
+            "OSM": osm,
+            "OSM HOT": osmHOT,
+        };
+
+        // Fungsi untuk menampilkan apa saja yang mau di tampilin
+        L.control.layers(baseLayers, overlayLayers).addTo(map);    
+    
+        // add MiniMap
+        var osmUrl = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+        var osmAttrib = 'Map data &copy; OpenStreetMap contributors';
+        var osm2 = new L.TileLayer(osmUrl, { minZoom: 0, maxZoom: 13, attribution: osmAttrib });
+        var rect1 = { color: "#ff1100", weight: 3 };
+        var rect2 = { color: "#0000AA", weight: 1, opacity: 0, fillOpacity: 0 };
+
+        var miniMap = new L.Control.MiniMap(osm2, {
+            toggleDisplay: true, position: "bottomright",
+            aimingRectOptions: rect1, shadowRectOptions: rect2
+        }).addTo(map);
+        
+        // add geocoder
+        L.Control.geocoder({
+        position: 'topleft'
+        }).addTo(map);
+
+
+    </script>
+
+</body>
+
+</html>
